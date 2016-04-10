@@ -9,14 +9,26 @@
 			<input type="manar" id="username" name="username" /><br />
 			<label for="password">password :</label>
 			<input type="password" id="password" name="password" /><br />
-		/*	<input type="submit" id="submit" name="submit" value="sub" />*/
-			<input type="submit" value="Submit" src="manar.azurewebsites.net" />
+		<input type="button" value="Login"  onclick="javascript:validate()" />
+			
 			</form>
-		<style type="text/css">
-/* CSS code goes here */
-body{}
-/* ... */
-</style>
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("username").value == "123"
+       && document.getElementById("password").value == "123" )
+    {
+        alert( "validation succeeded" );
+        location.href="run.html";
+    }
+    else
+    {
+        alert( "validation failed" );
+        location.href="fail.html";
+    }
+}
+</script>
+
 			<a href="http://manar.azurewebsites.net/">Go</a>
 			
 </body>
